@@ -25,6 +25,13 @@ const listaBici = [
 ];
 
 const text = document.getElementById("text-display");
+const list = document.getElementById("lista-bici");
+
+for (let i = 0; i < listaBici.length; i++) {
+  const newLi = document.createElement("li");
+  list.appendChild(newLi);
+  newLi.textContent = listaBici[i].nome;
+}
 
 function trovaPeso(min) {
   for (let i = 0; i < listaBici.length; i++) {
