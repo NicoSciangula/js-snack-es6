@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: rgb(32, 152, 232);
+}
+
+.container section{
+    border: 1px solid black;
+    border-radius: 2rem;
+}
+.container h1, p{
+    padding: 1.5rem;
+}
+.container h1{
+    color: rgb(148, 14, 14);
+}
