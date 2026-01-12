@@ -12,6 +12,8 @@ const squadre = [
   { nome: "Torino", puntiFatti: 0, falliSubiti: 0 },
 ];
 
+let newArray = [];
+
 function generateRandomNumber(max, min) {
   return Math.floor(Math.random() * (max - min) + min);
 }
@@ -20,11 +22,18 @@ for (let i = 0; i < squadre.length; i++) {
   squadre[i].falliSubiti += generateRandomNumber(15, 1);
   squadre[i].puntiFatti += generateRandomNumber(15, 1);
 }
-const newArray = squadre.map((squadra) => {
-  return {
-    nome: squadra.nome,
-    falliSubiti: squadra.falliSubiti,
-  };
+
+//! Usando il metodo Map
+// const newArray = squadre.map((squadra) => {
+//   return {
+//     nome: squadra.nome,
+//     falliSubiti: squadra.falliSubiti,
+//   };
+// });
+
+//! Usando il ForEach
+squadre.forEach((squadra) => {
+  newArray.push({ nome: squadra.nome, falliSubiti: squadra.falliSubiti });
 });
 
 console.log(newArray);
