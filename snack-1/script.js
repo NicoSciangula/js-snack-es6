@@ -25,3 +25,14 @@ const listaBici = [
 ];
 
 const text = document.getElementById("text-display");
+
+function trovaPeso(min) {
+  for (let i = 0; i < listaBici.length; i++) {
+    console.log(listaBici[i].peso);
+    if (listaBici[i].peso < min) {
+      return (text.textContent = `La bici con peso minore è: ${listaBici[i].nome}`);
+    }
+  }
+}
+
+trovaPeso(6.8);
