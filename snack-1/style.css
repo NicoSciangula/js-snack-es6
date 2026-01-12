@@ -14,10 +14,21 @@ body{
 .container section{
     border: 1px solid black;
     border-radius: 2rem;
+    width: 100%;
 }
 .container h1, p{
     padding: 1.5rem;
+    text-align: center;
 }
 .container h1{
     color: rgb(148, 14, 14);
+}
+#lista-bici{
+    display: flex;
+    padding: .5rem ;
+    align-items: center;
+    flex-direction: column;
+}
+#lista-bici li{
+padding-right: 1rem;
 }
