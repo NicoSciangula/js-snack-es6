@@ -12,13 +12,13 @@ const squadre = [
   { nome: "Torino", puntiFatti: 0, falliSubiti: 0 },
 ];
 
-function generateRandomNumber(max) {
-  return Math.floor(Math.random() * max);
+function generateRandomNumber(max, min) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 for (let i = 0; i < squadre.length; i++) {
-  squadre[i].falliSubiti += generateRandomNumber(10);
-  squadre[i].puntiFatti += generateRandomNumber(10);
+  squadre[i].falliSubiti += generateRandomNumber(15, 1);
+  squadre[i].puntiFatti += generateRandomNumber(15, 1);
 }
 const newArray = squadre.map((squadra) => {
   return {
