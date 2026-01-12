@@ -16,4 +16,15 @@ function generateRandomNumber(max) {
   return Math.floor(Math.random() * max);
 }
 
+for (let i = 0; i < squadre.length; i++) {
+  squadre[i].falliSubiti += generateRandomNumber(10);
+  squadre[i].puntiFatti += generateRandomNumber(10);
+}
+const newArray = squadre.map((squadra) => {
+  return {
+    nome: squadra.nome,
+    falliSubiti: squadra.falliSubiti,
+  };
+});
 
+console.log(newArray);
